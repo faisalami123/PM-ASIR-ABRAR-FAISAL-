@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Health Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Language Toggle -->
+  <button id="langToggle" onclick="toggleLanguage()">🌐 English / বাংলা</button>
+
+  <!-- Header -->
+  <header>
+    <h1 class="logo-title"><img src="logo.png" alt="Health Guide Logo" class="logo-icon"> Health Guide</h1>
+    <div class="header-title">Health Guide</div>
+    <p id="headerSubtitle">
+      আপনার সমস্যার প্রাথমিক ধারণা নিন / Get a preliminary idea of your problem
+    </p>
+    <button id="themeToggle">🌙 Dark Mode</button>
+  </header>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div id="sideMenu" class="side-menu">
+      <span class="close-btn" onclick="toggleMenu()">❌</span>
+      <a href="#" onclick="showHome(); toggleMenu()">Home</a>
+      <a href="#" onclick="showSymptoms(); toggleMenu()">Symptom Checker</a>
+      <a href="#" onclick="showFirstAid(); toggleMenu()">Home Care</a>
+      <a href="#" onclick="showCategories(); toggleMenu()">Categories</a>
+      <a href="#" onclick="showCommonProblems(); toggleMenu()">Common Problems</a>
+      <a href="#" onclick="showSection('about'); toggleMenu()">About</a>
+    </div>
+
+    <!-- Search Symptoms -->
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="Search symptoms..." />
+      <button id="searchButton">🔍 Search</button>
+    </div>
+
+    <!-- Food Section Button -->
+    <div class="food-entry">
+      <div class="home-card">
+        <img src="food.jpg" class="home-img" alt="Food">
+        <button class="home-btn" onclick="showFoodSection()">
+          🍎 Check Food
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Main Content -->
+  <main>
+    <section id="content">
+      <div class="home">
+        <img src="home.jpg" alt="Health Guide" class="home-img">
+        <h2 id="homeTitle">স্বাগতম Health Guide এ</h2>
+        <p id="homeSubtitle">আপনার সমস্যার প্রাথমিক ধারণা নিন</p>
+
+        <!-- Common Problems Card -->
+        <div class="home-grid">
+          <div class="home-card">
+            <img src="problems.jpg" class="home-img" alt="Common Problems">
+            <button class="home-btn" onclick="showCommonProblems()">
+              সাধারণ সমস্যা / Common Problems
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- About Section -->
+  <section id="about" style="display:none;">
+    <h2 id="aboutTitle">About Health Guide</h2>
+    <p id="aboutPurpose">
+      Health Guide তৈরি হয়েছে যেন ব্যবহারকারী তাদের সমস্যার প্রাথমিক ধারণা নিতে পারেন —
+      সহজ ভাষায়, দ্রুত এবং বিনামূল্যে।
+    </p>
+  
+    <h3 id="aboutFeaturesTitle">Features</h3>
+    <ul>
+      <li id="feature1">লক্ষণ অনুসারে preliminary health ধারণা</li>
+      <li id="feature2">খাদ্য সম্পর্কিত তথ্য</li>
+      <li id="feature3">Home care / First aid গাইড</li>
+      <li id="feature4">বাংলা ও ইংরেজি ভাষা সাপোর্ট</li>
+      <li id="feature5">Dark mode toggle</li>
+    </ul>
+  
+    <h3 id="aboutLimitationsTitle">Limitations</h3>
+    <p id="aboutLimitations">⚠️ এই অ্যাপটি চিকিৎসকের বিকল্প নয়।</p>
+  
+    <h3 id="aboutFutureTitle">Future Plans</h3>
+    <p id="aboutFuture">
+      ভবিষ্যতে আরও ফিচার যোগ করা হবে — যেমন live doctor chat, symptom history tracking,
+      এবং offline mode।
+    </p>
+  
+    <button onclick="showSection('content')">⬅️ Back</button>
+  </section>
+  
+  <!-- Footer -->
+  <footer id="footerText">
+    ⚠️ এই অ্যাপটি চিকিৎসকের বিকল্প নয় / This app is not a substitute for a doctor.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
